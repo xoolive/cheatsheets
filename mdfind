@@ -1,0 +1,14 @@
+# mdfind is the MacOS interface to the Spotlight search engine. MacOS runs a
+# daemon to index all files on the system. mdfind searches for patterns inside
+# files; the -name option limits the search to file names.
+
+# the five latest modified files (limited to the past 5 days)
+mdfind -onlyin ~/Pictures 'kMDItemPixelCount > 15000000'
+
+# You can also limit the search to specific directories with -onlyin or work in
+# real-time mode with the -live option.
+mdfind -live 'kMDItemContentModificationDate >= $time.now'
+[Type ctrl-C to exit]
+Query update: 1 matches
+Query update: 2 matches
+

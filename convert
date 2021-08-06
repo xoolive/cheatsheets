@@ -1,0 +1,6 @@
+# Convert a SVG file and handle transparency
+convert -background none -density 1000 -resize 1000x file.svg file.png
+
+# Handle transparency
+convert input.png -fuzz 10% -transparent white output.png
+

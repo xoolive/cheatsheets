@@ -1,0 +1,18 @@
+# Pretty print a XML file
+xmllint --format file.xml
+
+# Remove empty directories
+find . -type d -empty -delete
+
+# Search for files with identical content
+fdupes .  # first checks checksums then byte-by-byte
+
+# Crop a movie
+ffmpeg -i input.avi -vcodec copy -acodec copy -ss 01:00:00 -t 00:30:00 output.avi
+
+# Reset USB ports
+for i in /sys/bus/pci/drivers/[uoex]hci_hcd/*:*; do
+  echo "${i##*/}" > "${i%/*}/unbind"
+  echo "${i##*/}" > "${i%/*}/bind"
+done
+

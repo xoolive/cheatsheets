@@ -1,0 +1,13 @@
+# Crop a pdf file to hide/reveal part of it
+pdfcrop --margins '0 0 0 -620' --clip private_information.pdf
+
+# Merge several pdf files
+pdftk in1.pdf in2.pdf in3.pdf cat output out1.pdf
+# or with the pdfjam suite:
+pdfjoin -o output.pdf in1.pdf in2.pdf in3.pdf
+
+# Compress/uncompress pdf files
+pdftk book.pdf output uncompressed.pdf uncompress
+# and after editing the file
+pdftk uncompressed.pdf output clean.pdf compress
+

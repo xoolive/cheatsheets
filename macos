@@ -1,0 +1,7 @@
+# Reset default timezones in iCal
+defaults read com.apple.iCal 'RecentlyUsedTimeZones'
+defaults write com.apple.iCal 'RecentlyUsedTimeZones' '("Europe/Paris", "Asia/Tokyo")'
+
+# Force Mail to Unicode
+defaults write com.apple.mail NSPreferredMailCharset "UTF-8"
+
